@@ -1,0 +1,5 @@
+A		B		S1	S0	AU_Out
+9f6e1d1c	215ca2fe	0	0	7e117a1e
+9f6e1d1c	215ca2fe	0	1	c0cac01a
+9f6e1d1c	215ca2fe	1	0	9f6e1d1d
+9f6e1d1c	215ca2fe	1	1	215ca2fe
