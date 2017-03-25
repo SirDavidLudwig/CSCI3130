@@ -1,0 +1,4 @@
+Clock	Load	Bus	Data_In	Data_Out	Bus_Out
+0	0	0	0000040b	0000040b	xxxxxxxx
+0	0	1	0000040b	0000040b	0000040b
+0	0	0	0000040b	0000040b	xxxxxxxx
