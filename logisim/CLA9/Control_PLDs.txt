@@ -1,0 +1,8 @@
+PC_BUS: t0 + t2
+PC_LD: !clock (t4 (d5 + z d6))
+PC_INC: t1 + t3 (d1+d2) + !z d6 t4
+
+AR_LD: !clock (t0 + t2 + t4 (d1 + d2))
+
+DR_BUS: t2 + (t4 + t6)(d1 + d2) + t4(d5 + z d6) 
+DR_LD: !clock(t1 + (d1 + d2)(t3 + t5) + t3(d5 + z d6))
