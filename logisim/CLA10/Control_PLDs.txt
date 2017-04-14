@@ -14,4 +14,17 @@ S_LD: !clock (d0 t3)
 
 ACC_CLR: d11 t3
 ACC_LD: !clock (d1 t6 + t3 (d4 + d8 + d9 + d10 + d12 + d13 + d14 + d15))
-ACC_BUS: 
+ACC_BUS: d2 t5 + t3 (d3 + d7 + d8 + d9)
+ACC_SEL:
+	NOT: s2 = d15, s1 = d15, s0 = d15
+	AND: s2 = d12, s1 = 0, s0 = 0
+	OR: s2 = d13, s1 = 0, s0 = d13
+	
+	ADD: s2 = 0, s1 = 0, s0 = d9
+	SUB: s2 = 0, s1 = 0, s0 = 0
+	INC: s2 = 0, s1 = d10, s0 = d10
+	ASHR: s2 = d14, s1 = d14, s0 = 0
+	
+	s2 = d15 + d12 + d13 + d14
+	s1 = d15 + d10 + d14 + d4 + d1
+	s0 = d15 + d13 + d9 + d10 + d4 + d1
