@@ -1,0 +1,77 @@
+; Jump to main
+JMP main
+
+; Variables
+var1: A9
+var2: 2B
+var3: AF
+var4: D1
+
+; Results
+result1: 0
+result2: 0
+result3: 0
+result4: 0
+result5: 0
+result6: 0
+result7: 0
+
+; Main program
+main:
+	; A9 + 2B
+	LDAC var1		; Load var1 into ACC
+	MVAC			; Move ACC to R
+	LDAC var2		; Load var2 into
+	ADD 			; Add ACC and R
+	STAC result1	; Store the result in memory
+	OUT 			; Display the result
+	CLAC
+
+	; A9 - 2B
+	LDAC var2		; Load var2 into ACC
+	MVAC			; Move ACC to R
+	LDAC var1		; Load var1 into
+	SUB 			; Subtract ACC and R
+	STAC result2	; Store the result in memory
+	OUT 			; Display the result
+	CLAC
+
+	; A9 AND 2B
+	LDAC var1		; Load var1 into ACC
+	MVAC			; Move ACC to R
+	LDAC var2		; Load var2 into
+	AND 			; AND ACC and R
+	STAC result3	; Store the result in memory
+	OUT 			; Display the result
+	CLAC
+
+	; A9 OR 2B
+	LDAC var1		; Load var1 into ACC
+	MVAC			; Move ACC to R
+	LDAC var2		; Load var2 into
+	OR 				; OR ACC and R
+	STAC result4	; Store the result in memory
+	OUT 			; Display the result
+	CLAC
+
+	; ASHR A9
+	LDAC var1		; Load var1 into ACC
+	ASHR 			; Arithmetic-right-shift ACC
+	STAC result5	; Store the result in memory
+	OUT 			; Display the result
+	CLAC
+
+	; AF + 1
+	LDAC var3		; Load var3 into ACC
+	INC 			; Increment ACC
+	STAC result6 	; Store the result in memory
+	OUT 			; Display the result
+	CLAC
+
+	; NOT D1
+	LDAC var4 		; Load var4 into ACC
+	NOT 			; Negate ACC
+	STAC result7 	; Store the result in memory
+	OUT 			; Display the result
+
+	HALT 			; Finished

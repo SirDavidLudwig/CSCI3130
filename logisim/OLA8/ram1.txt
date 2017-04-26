@@ -1,0 +1,16 @@
+; Jump to main
+JMP main
+
+; Variables
+var1: 10
+var2: 8
+
+; Main program
+main: 
+	LDAC var2	; Load 8 into ACC
+	MVAC 		; Move 8 into R
+	LDAC var1 	; Load 10 into ACC
+	SUB 		; Subtract R from ACC
+	OUT 		; Display ACC
+
+	HALT	 	; Finished
